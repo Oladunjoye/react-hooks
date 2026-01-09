@@ -1,6 +1,6 @@
 // useState: tic tac toe
 // 💯 (alternate) migrate from classes
-// http://localhost:3000/isolated/exercise/04-classes.js
+// http://localhost:4000/isolated/exercise/04-classes.js
 
 import * as React from 'react'
 

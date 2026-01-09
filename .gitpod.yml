@@ -57,7 +57,7 @@ tasks:
 ## Learn more about ports at 'https://www.gitpod.io/docs/config-ports'
 
 ports:
- - port: 3000 # alternatively configure entire ranges via '8080-8090'
+ - port: 4000 # alternatively configure entire ranges via '8080-8090'
    visibility: private # either 'public' or 'private' (default)
    onOpen: open-browser # either 'open-browser', 'open-preview' or 'ignore'
 

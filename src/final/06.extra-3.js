@@ -1,6 +1,6 @@
 // useEffect: HTTP requests
 // 💯 store the state in an object
-// http://localhost:3000/isolated/final/06.extra-3.js
+// http://localhost:4000/isolated/final/06.extra-3.js
 
 import * as React from 'react'
 import {

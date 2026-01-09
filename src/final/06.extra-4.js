@@ -1,6 +1,6 @@
 // useEffect: HTTP requests
 // 💯 create an ErrorBoundary component
-// http://localhost:3000/isolated/final/06.extra-4.js
+// http://localhost:4000/isolated/final/06.extra-4.js
 
 import * as React from 'react'
 import {

@@ -1,6 +1,6 @@
 // useEffect: HTTP requests
 // 💯 use a status
-// http://localhost:3000/isolated/final/06.extra-2.js
+// http://localhost:4000/isolated/final/06.extra-2.js
 
 import * as React from 'react'
 import {

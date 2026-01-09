@@ -1,6 +1,6 @@
 // useEffect: HTTP requests
 // 💯 re-mount the error boundary
-// http://localhost:3000/isolated/final/06.extra-5.js
+// http://localhost:4000/isolated/final/06.extra-5.js
 
 import * as React from 'react'
 import {
