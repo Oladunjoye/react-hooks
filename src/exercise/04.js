@@ -5,7 +5,8 @@ import * as React from 'react'
 
 function Board() {
   // 🐨 squares is the state for this component. Add useState for squares
-  const squares = Array(9).fill(null)
+  const [squares, setSquares] = React.useState(Array(9).fill(null))
+  const [nextValue, setNextValue] = React.useState(() => calculateNextValue(squares))
 
   // 🐨 We'll need the following bits of derived state:
   // - nextValue ('X' or 'O')
@@ -26,16 +27,29 @@ function Board() {
     //
     // 🐨 make a copy of the squares array
     // 💰 `[...squares]` will do it!)
+    const squaresCopy = [...squares]
+    //
+    // 🐨 set the value of the square that was selected
+    // 💰 `squaresCopy[square] = nextValue`
+    squaresCopy[square] = nextValue
+    setSquares(squaresCopy)
+    setNextValue(nextValue === 'X' ? 'O' : 'X')
+    //
+    // 🐨 set the squares to your copy
+  }
     //
     // 🐨 set the value of the square that was selected
     // 💰 `squaresCopy[square] = nextValue`
     //
     // 🐨 set the squares to your copy
-  }
+  
 
   function restart() {
     // 🐨 reset the squares
     // 💰 `Array(9).fill(null)` will do it!
+    // Array(9).fill(null)
+    setSquares(Array(9).fill(null))
+    setNextValue('X')
   }
 
   function renderSquare(i) {
@@ -46,10 +60,13 @@ function Board() {
     )
   }
 
+
   return (
     <div>
       {/* 🐨 put the status in the div below */}
-      <div className="status">STATUS</div>
+      <div className="status">STATUS: {calculateStatus(calculateWinner(squares), squares, nextValue)}</div>
+        <div className="game-info">
+      </div>
       <div className="board-row">
         {renderSquare(0)}
         {renderSquare(1)}
@@ -70,11 +87,14 @@ function Board() {
       </button>
     </div>
   )
+
 }
+
 
 function Game() {
   return (
     <div className="game">
+    
       <div className="game-board">
         <Board />
       </div>
